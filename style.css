@@ -1,12 +1,89 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+    background: #e9eef5;
     text-align: center;
-    margin-top: 100px;
-    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
 }
 
-button {
-    padding: 20px 40px;
-    font-size: 20px;
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.clicker-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.main-button {
+    padding: 20px 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background: #4a9cff;
+    color: white;
     cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.main-button:hover {
+    background: #1c7df0;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.shop-section {
+    max-width: 450px;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.shop-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.shop-item h3 {
+    margin: 0;
+}
+
+.shop-item button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.shop-item button:hover {
+    background: #3e8e41;
+}
+
+.cost {
+    font-weight: bold;
+    margin-top: 5px;
 }
