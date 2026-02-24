@@ -37,23 +37,21 @@ document.getElementById("buyDouble").onclick = () => buyUpgrade("double");
 // SHOP SYSTEM
 // --------------------
 function buyUpgrade(type) {
-
     if (type === "click" && score >= upgrade1Cost) {
         score -= upgrade1Cost;
         clickValue += 1;
         upgrade1Cost = Math.floor(upgrade1Cost * 1.6);
-    }
-
-    else if (type === "auto" && score >= autoCost) {
+    } else if (type === "auto" && score >= autoCost) {
         score -= autoCost;
         autoClickers += 1;
         autoCost = Math.floor(autoCost * 1.7);
-    }
-
-    else if (type === "double" && score >= doubleCost) {
+    } else if (type === "double" && score >= doubleCost) {
         score -= doubleCost;
         clickValue *= 2;
         doubleCost = Math.floor(doubleCost * 2.2);
+    } else {
+        alert("Not enough coins!");
+        return;
     }
 
     updateUI();
@@ -106,4 +104,5 @@ function loadGame() {
         doubleCost = data.doubleCost;
         autoClickers = data.autoClickers;
     }
+    updateUI();
 }
