@@ -1,55 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Super Clean Clicker Game</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Cheese Clicker</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #fff9cc;
+    }
+
+    #cheese {
+      width: 200px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #counter {
+      font-size: 32px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
+  <h1>Cheese Clicker 🧀</h1>
 
-    <h1>Super Clean Clicker Game</h1>
+  <img id="cheese" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Cheese_icon.png">
 
-    <div class="game-container">
-        <div class="clicker-section">
-            <p class="score-label">Coins:</p>
-            <p id="score" class="score">0</p>
+  <div id="counter">Cheese: 0</div>
 
-            <button id="clickBtn" class="main-button">CLICK</button>
-        </div>
-
-        <div class="shop-section">
-            <h2>Shop</h2>
-
-            <div class="shop-grid">
-
-                <!-- Upgrade 1 -->
-                <div class="shop-item">
-                    <h3>+1 Per Click</h3>
-                    <p>Increase your click power.</p>
-                    <p class="cost">Cost: <span id="upgrade1Cost">10</span></p>
-                    <button id="buyUpgrade1">Buy</button>
-                </div>
-
-                <!-- Upgrade 2 -->
-                <div class="shop-item">
-                    <h3>Auto Clicker</h3>
-                    <p>Automatically generates coins.</p>
-                    <p class="cost">Cost: <span id="autoCost">50</span></p>
-                    <button id="buyAuto">Buy</button>
-                </div>
-
-                <!-- Upgrade 3 -->
-                <div class="shop-item">
-                    <h3>Double Coins</h3>
-                    <p>Permanently doubles all coins earned.</p>
-                    <p class="cost">Cost: <span id="doubleCost">200</span></p>
-                    <button id="buyDouble">Buy</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
